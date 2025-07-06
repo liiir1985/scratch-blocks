@@ -48,6 +48,91 @@ Blockly.Blocks['motion_movesteps'] = {
   }
 };
 
+Blockly.Blocks['motion_move_path'] = {
+  /**
+   * Block for if-then.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MOTION_MOVE_PATH,
+      "message1": "%1", // Statement
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "TARGET",
+          "options": [
+            ['角色', 'player'],
+            ['本事件', 'self']
+          ]
+        }
+      ],
+      "args1": [
+        {
+          "type": "input_statement",
+          "name": "SUBSTACK"
+        }
+      ],
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['motion_face_dir'] = {
+  /**
+   * Block to move steps.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MOTION_FACE_DIR,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "DIR",
+          "options": [
+            ['上', 'up'],
+            ['下', 'down'],
+            ['左', 'left'],
+            ['右', 'right'],
+          ]
+        }
+      ],
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['motion_step_one'] = {
+  /**
+   * Block to move steps.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MOTION_STEP_ONE,
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['motion_wait_move'] = {
+  /**
+   * Block to move steps.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MOTION_WAIT_MOVE,
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+    });
+  }
+};
+
 Blockly.Blocks['motion_turnright'] = {
   /**
    * Block to turn right.

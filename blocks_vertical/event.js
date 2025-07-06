@@ -164,10 +164,80 @@ Blockly.Blocks['event_whenswitchon'] = {
             ['C', 'C'],
             ['D', 'D'],
           ]
+        },
+        {
+          "type": "field_dropdown",
+          "name": "TIMING_NAME",
+          "options": [
+            ['按下决定键时', 'USE'],
+            ['与主角接触时', 'PLAYER_ENTER'],
+            ['与事件接触时', 'EVENT_ENTER'],
+            ['自动', 'AUTO'],
+          ]
         }
       ],
       "category": Blockly.Categories.event,
       "extensions": ["colours_event", "shape_hat"]
+    });
+  }
+};
+
+Blockly.Blocks['event_whentiming'] = {
+  /**
+   * Block for when the current backdrop switched to a selected backdrop.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.EVENT_WHEN_TIMING,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "TIMING_NAME",
+          "options": [
+            ['按下决定键时', 'USE'],
+            ['与主角接触时', 'PLAYER_ENTER'],
+            ['与事件接触时', 'EVENT_ENTER'],
+            ['自动', 'AUTO'],
+          ]
+        }
+      ],
+      "category": Blockly.Categories.event,
+      "extensions": ["colours_event", "shape_hat"]
+    });
+  }
+};
+
+Blockly.Blocks['event_setswitchto'] = {
+  /**
+   * Block to set variable to a certain value
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.EVENT_SET_SWITCH_TO,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "SWITCH_NAME",
+          "options": [
+            ['A', 'A'],
+            ['B', 'B'],
+            ['C', 'C'],
+            ['D', 'D'],
+          ]
+        },
+        {
+          "type": "field_dropdown",
+          "name": "SWITCH_VALUE",
+          "options": [
+            ['On', 'on'],
+            ['Off', 'off'],
+          ]
+        }
+      ],
+      "category": Blockly.Categories.data,
+      "extensions": ["colours_data", "shape_statement"]
     });
   }
 };

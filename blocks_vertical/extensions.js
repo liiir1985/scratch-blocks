@@ -27,6 +27,25 @@ goog.require('Blockly.Colours');
 goog.require('Blockly.constants');
 goog.require('Blockly.ScratchBlocks.VerticalExtensions');
 
+Blockly.Blocks['extension_show_text'] = {
+  /**
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": "显示文章: %1 ",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "TEXT",
+        }
+      ],
+      "category": Blockly.Categories.more,
+      "extensions": ["colours_more", "shape_statement"]
+    });
+  }
+};
+
 Blockly.Blocks['extension_pen_down'] = {
   /**
    * @this Blockly.Block
