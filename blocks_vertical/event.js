@@ -146,6 +146,32 @@ Blockly.Blocks['event_whenbroadcastreceived'] = {
   }
 };
 
+Blockly.Blocks['event_whenswitchon'] = {
+  /**
+   * Block for when the current backdrop switched to a selected backdrop.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.EVENT_WHENSWITCH_ON,
+      "args0": [
+        {
+          "type": "field_dropdown",
+          "name": "SWITCH_NAME",
+          "options": [
+            ['A', 'A'],
+            ['B', 'B'],
+            ['C', 'C'],
+            ['D', 'D'],
+          ]
+        }
+      ],
+      "category": Blockly.Categories.event,
+      "extensions": ["colours_event", "shape_hat"]
+    });
+  }
+};
+
 Blockly.Blocks['event_whenbackdropswitchesto'] = {
   /**
    * Block for when the current backdrop switched to a selected backdrop.
